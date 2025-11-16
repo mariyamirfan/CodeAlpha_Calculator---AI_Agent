@@ -1,11 +1,20 @@
-About My Agent – Nexa
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+</div>
 
-Nexa is a unique and intelligent frontend-based AI assistant designed to work alongside a modern calculator named CalcFlow. Nexa is built entirely using HTML, CSS, and JavaScript, with no backend dependencies, making it lightweight, easy to deploy, and fully interactive directly in the browser. The agent enhances user experience by providing instant answers, guidance for calculations, and a smart conversational interface that complements the calculator functionality.
+# Run and deploy your AI Studio app
 
-The main purpose of Nexa is to assist users in performing calculations, answering mathematical queries, and providing quick responses to general questions. By integrating Nexa with CalcFlow in a single interface, users can interact with an AI assistant while simultaneously performing calculations, making the project both functional and innovative. This dual-feature setup ensures that the application stands out from standard calculator projects, giving it a professional and futuristic feel.
+This contains everything you need to run your app locally.
 
-Nexa features a dynamic, responsive layout. On larger screens, the agent is positioned on the left side, while CalcFlow occupies the right. On mobile or tablet devices, Nexa collapses into a smaller icon to keep the calculator fully visible. Users can expand or collapse the agent smoothly with a sliding animation, ensuring a consistent, visually appealing experience across devices.
+View your app in AI Studio: https://ai.studio/apps/drive/1vTttcc3Ye8pj-jpSK2srx1tgATvTKXVb
 
-The agent’s input area automatically resizes based on the text length, preventing overflow and keeping the interface clean. User messages are displayed with a small avatar icon, while Nexa responds with its own avatar. Additionally, Nexa incorporates typing animations, where each character appears sequentially, combined with subtle loading effects, creating a natural and engaging conversational flow.
+## Run Locally
 
-Nexa also includes a voice input feature through a microphone button, enabling users to speak queries directly to the agent. Emojis and expressive reactions make interactions fun and visually engaging. Overall, Nexa combines functionality, interactivity, and aesthetic design, delivering a truly unique AI assistant experience. By integrating a smart agent with a calculator in a single responsive interface, Nexa demonstrates advanced frontend development skills and creativity.
+**Prerequisites:**  Node.js
+
+
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`

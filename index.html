@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator & AI Agent</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.29.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="agent-container">
+            <header>
+                <h1>Nexa</h1>
+                <div class="header-controls">
+                    <button id="close-agent-btn" aria-label="Close agent">
+                        <span class="material-symbols-outlined">close</span>
+                    </button>
+                    <button class="theme-toggle-btn" aria-label="Toggle theme">
+                        <span class="material-symbols-outlined theme-icon">light_mode</span>
+                    </button>
+                </div>
+            </header>
+            <main class="chat-display" id="chat-display" aria-live="polite"></main>
+            <footer>
+                <form id="chat-form">
+                    <button type="button" id="chat-avatar-btn" class="avatar" aria-label="Agent options">
+                        <span class="material-symbols-outlined">smart_toy</span>
+                    </button>
+                    <div class="input-wrapper">
+                        <textarea id="chat-input" placeholder="Ask any math question" required rows="1"></textarea>
+                        <button type="button" id="mic-btn" aria-label="Use microphone">
+                            <span class="material-symbols-outlined">mic</span>
+                        </button>
+                        <button type="submit" id="send-btn" aria-label="Send message">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </form>
+            </footer>
+        </div>
+        <div class="calculator-container">
+            <div class="mobile-header">
+                 <button id="agent-toggle-mobile" aria-label="Toggle agent view">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                </button>
+                <h2 class="calculator-title">CalcFlow</h2>
+                <button id="theme-toggle-mobile" class="theme-toggle-btn" aria-label="Toggle theme">
+                    <span class="material-symbols-outlined theme-icon">light_mode</span>
+                </button>
+            </div>
+            <div class="calculator">
+                <h2 class="calculator-title desktop-title">CalcFlow</h2>
+                <div class="calculator-display" id="calc-display" role="textbox" aria-readonly="true">0</div>
+                <div class="calculator-buttons">
+                    <!-- Row 1 -->
+                    <button class="btn top-row" data-value="AC">AC</button>
+                    <button class="btn top-row" data-value="+/-">+/-</button>
+                    <button class="btn top-row" data-value="%">%</button>
+                    <button class="btn operator" data-value="÷">÷</button>
+                    <!-- Row 2 -->
+                    <button class="btn number" data-value="7">7</button>
+                    <button class="btn number" data-value="8">8</button>
+                    <button class="btn number" data-value="9">9</button>
+                    <button class="btn operator" data-value="×">×</button>
+                    <!-- Row 3 -->
+                    <button class="btn number" data-value="4">4</button>
+                    <button class="btn number" data-value="5">5</button>
+                    <button class="btn number" data-value="6">6</button>
+                    <button class="btn operator" data-value="-">-</button>
+                    <!-- Row 4 -->
+                    <button class="btn number" data-value="1">1</button>
+                    <button class="btn number" data-value="2">2</button>
+                    <button class="btn number" data-value="3">3</button>
+                    <button class="btn operator" data-value="+">+</button>
+                    <!-- Row 5 -->
+                    <button class="btn number btn-zero" data-value="0">0</button>
+                    <button class="btn number" data-value=".">.</button>
+                    <button class="btn operator" data-value="=">=</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
